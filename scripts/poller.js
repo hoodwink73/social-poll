@@ -56,7 +56,7 @@ Poller.prototype.start = function (successCb, once) {
   // check for an existing polling event at every interval
   if (!intervalObj) {
     var jqxhr = doItAgain();
-    successCb = this.successCb;
+    successCb = this.successCb || successCb;
     if ( once ) {
       return ;
     }
