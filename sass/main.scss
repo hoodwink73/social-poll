@@ -1,0 +1,113 @@
+$primaryColor: #ff6966;
+$midnight: #34495e;
+
+
+body {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  font-family: 'Helvetica Neue', 'Helvetica', 'sans-serif';
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+header {
+  margin-top: 15px;
+  color: $primaryColor;
+  .logo {
+    img {
+      width: 150px;
+    }
+  }
+  .hashtag-title {
+    margin-top: 20px;
+  }
+}
+
+#start-message, .question, .not-listening, .name {
+  font-size: 60px;
+  margin-top: 30px;
+  color: $midnight;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+
+
+.not-listening {
+  font-weight: 500;
+  font-size: 36px;
+}
+
+canvas {
+  margin: 35px auto;
+}
+
+.animated {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+          animation-name: flash;
+}
+
+.name {
+  font-size: 36px;
+  text-transform: capitalize;
+  padding: 5px;
+}
+
+.doughnut-legend {
+  display: inline;
+  position: absolute;
+  li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    font-size: 36px;
+    font-weight: 600;
+    color: $midnight;
+    .legend-color-label {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Airwoot HQ Social Poll</title>
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./stylesheets/main.css">
+
+  <script type="template/underscore" id="name" data-question="1">
+    <h2 class="question"> What is your name </h2>
+    <section class="names-wrapper">
+    </section>
+    <div class="not-listening">
+      We are not listening to this question yet.
+    </div>
+  </script>
+  <script type="template/underscore" id="age" data-question="2">
+    <h2 class="question"> what is your age </h2>
+    <section class="age-chart-wrapper">
+      <canvas id="age-chart" width="600" height="400"></canvas>
+    </section>
+    <div class="not-listening">
+      We are not listening to this question yet.
+    </div>
+  </script>
+  <script type="template/underscore" id="entrepreneur" data-question="3">
+    <h2 class="question"> Do you want to become an entrepreneur? </h2>
+    <section class="entrepreneur-pie-wrapper">
+      <canvas id="entrepreneur-pie" width="500" height="500"></canvas>
+    </section>
+    <div class="not-listening">
+      We are not listening to this question yet.
+    </div>
+  </script>
+  <script type="template/underscore" id="social" data-question="4">
+    <h2 class="question"> Do you contact the brand on social for support and queries? </h2>
+    <section class="social-pie-wrapper">
+      <canvas id="social-pie" width="500" height="500"></canvas>
+    </section>
+    <div class="not-listening">
+      We are not listening to this question yet.
+    </div>
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="logo" title="Airwoot">
+            <img src="http://airwoot.com/images/logo3.png" alt="The world's most intelligent social customer support helpdesk. Ever." />
+            <div class="hashtag-title">
+              #airwootHQ
+            </div>
+          </h1>
+
+        </div>
+      </div>
+    </header>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="start-message">
+        Welcome to Airwoot. We will have a quick interactive session. But our medium will be twitter. Please open 'Twitter' on your phones.
+        </div>
+        <div class="app-wrapper">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="./bower_components/underscore/underscore-min.js"></script>
+  <script src="./bower_components/backbone/backbone.js"></script>
+  <script src="./bower_components/chartjs/Chart.js"></script>
+  <script src="./bower_components/chartjs/src/Chart.Bar.js"></script>
+  <script src="./bower_components/chartjs/src/Chart.Doughnut.js"></script>
+  <script src="./scripts/poller.js"></script>
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
