@@ -24,9 +24,9 @@ $(function() {
     app.presentQuestion = questionNo;
     // send a request to server stating that
     // it should start listening to a new question
-    var requestBody = JSON.stringify({
-      "question": questionNo + ""
-    });
+    var requestBody = {
+      'question': questionNo
+    };
     app.utils.postJSON(app.activateAPI, requestBody, function () {
       app.poller.stop();
       app.poller.changeUrl(app.pollAPI + app.presentQuestion);
@@ -245,9 +245,14 @@ $(function() {
   };
 
   app.utils.postJSON = function (api, data, success) {
-    $.post(api, data, function(response) {
-        success(response);
-    }, 'json');
+    $.ajax({
+      url: api,
+      type: 'POST',
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify(data),
+      success: success
+    });
   };
 
   app.on('question:new', function (questionNum) {
