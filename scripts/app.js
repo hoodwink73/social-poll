@@ -24,9 +24,10 @@ $(function() {
     app.presentQuestion = questionNo;
     // send a request to server stating that
     // it should start listening to a new question
-    app.utils.postJSON(app.activateAPI, {
-      'question': app.presentQuestion
-    }, function () {
+    var requestBody = JSON.stringify({
+      "question": questionNo + ""
+    });
+    app.utils.postJSON(app.activateAPI, requestBody, function () {
       app.poller.stop();
       app.poller.changeUrl(app.pollAPI + app.presentQuestion);
       app.trigger('question:new', app.presentQuestion);
