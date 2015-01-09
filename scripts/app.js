@@ -55,7 +55,7 @@ $(function() {
       $('.not-listening').hide();
 
       var previousNames = app.first.previousNames;
-      names = names.data;
+      names = names.data.names;
 
       var newNames = _.difference(names, previousNames);
 
