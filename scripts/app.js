@@ -3,8 +3,8 @@ $(function() {
   var app = window.app = _.extend(Backbone.Events, {});
   var dev = false;
   app.presentQuestion = null;
-  app.activateAPI = "http://demo.airwoot.com/api/activate";
-  app.pollAPI = "http://demo.airwoot.com/api/results?question=";
+  app.activateAPI = "/api/activate";
+  app.pollAPI = "/api/results?question=";
 
 
   app.utils = {};
